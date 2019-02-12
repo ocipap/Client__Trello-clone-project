@@ -28,7 +28,7 @@
 </script>
 <style scoped>
     footer.quiet {
-        margin: 4em 1em;
+        margin: 5.7rem 1rem;
     }
     
     footer.quiet>ul {

@@ -8,7 +8,7 @@
           </router-link>
         </div>
         <div class="global-header-section mod-right">
-          <router-link v-if="isAuthenicated" class="gotoboard" :to="{name: 'BoardName', params: {username: 'ocipap'}}">Go to Your Boards</router-link>
+          <router-link v-if="isAuthenicated" class="gotoboard" :to="{name: 'BoardHome', params: {username: 'ocipap'}}">Go to Your Boards</router-link>
           <div class="option" v-else>
             <router-link class="login" to="/login">Log In</router-link>
             <router-link class="signup" to="/signup">Sign Up</router-link>
@@ -186,7 +186,10 @@
 <script>
   import Slick from 'vue-slick'
   import MainFooter from '@/components/Footer.vue'
-
+  import {
+    mapGetters
+  } from 'vuex';
+  
   export default {
     components: {
       Slick,
@@ -194,7 +197,6 @@
     },
     data() {
       return {
-        isAuthenicated: false,
         slickOptions: {
           slidesToShow: 1,
           dots: true,
@@ -209,6 +211,14 @@
     methods: {
       handleScroll() {
         this.scrolled = window.scrollY > 80;
+      }
+    },
+    computed: {
+      ...mapGetters([
+        'isAuth'
+      ]),
+      isAuthenicated () {
+        return this.isAuth
       }
     },
     created() {
@@ -332,8 +342,8 @@
   }
   
   .global-header {
-    background: rgba(155,94,223,0);
-    box-shadow: 0 0 10px rgba(0,0,0,0);
+    background: rgba(155, 94, 223, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
     transition: background 1s ease 0s, box-shadow 1s ease 0s;
     position: fixed;
     height: 3rem;
@@ -341,8 +351,8 @@
     width: 100%;
     z-index: 1001;
   }
-
-  .global-header.on{
+  
+  .global-header.on {
     background: #0079bf !important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
