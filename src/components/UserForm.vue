@@ -27,7 +27,7 @@
 
 <style scoped>
     .user-cover {
-        padding: 5.7rem 1rem;
+        padding: 4rem .7rem;
     }
     
     .user-cover .container {
@@ -42,9 +42,10 @@
         border-radius: 3px;
         font-weight: 100;
         color: #fff;
-        padding: 0.8rem 1rem;
-        margin: 1rem 0rem;
-        line-height: 1.8rem;
+        padding: .56rem .7rem;
+        margin: .7rem 0rem;
+        line-height: 1.26rem;
+        font-size: 0.7rem;
     }
     
     .user-cover .user-error .error a {
@@ -74,16 +75,15 @@
     }
     
     .user-cover .user-body {
-        padding: 1.7rem 0;
+        padding: 1.19rem 0;
     }
     
     .user-cover .user-body .form-group {
-        padding-bottom: 2rem;
+        padding-bottom: 1.4rem;
     }
     
     .user-cover .user-body .form-group .label {
-        font-size: 1.42rem;
-        margin-bottom: .5rem;
+        margin-bottom: 0.35rem;
     }
     
     .user-cover .user-body .form-group .label .desc {
@@ -97,9 +97,9 @@
         border-radius: 4px;
         border: 1px solid #cdd2d4;
         box-sizing: border-box;
-        padding: 0.7rem;
+        padding: 0.5rem;
         width: 100%;
-        font-size: 1.42rem;
+        font-size: 1rem;
     }
     
     .user-cover .user-body .form-group .input[type=text]:focus,
@@ -128,10 +128,10 @@
         box-shadow: none;
         color: hsl(0, 0%, 55%);
         cursor: default;
-        font-size: 1.42rem;
         font-weight: bolder;
-        padding: 1rem;
+        padding: 0.7rem;
         border: none;
+        font-size: 1rem;
     }
     
     .user-cover .user-body .button.button-primary {
@@ -146,13 +146,12 @@
     }
     
     .user-cover .user-footer p {
-        font-size: 1.42rem;
         color: hsl(0, 0%, 60%);
     }
     
     .user-cover .user-footer p.small {
-        font-size: 1rem;
-        line-height: 2.4rem;
+        font-size: 0.7rem;
+        line-height: 1.68rem;
     }
     
     .user-cover .user-footer p>a {

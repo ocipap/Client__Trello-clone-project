@@ -16,7 +16,7 @@
   body {
     padding: 0;
     margin: 0;
-    font-size: 14px;
+    font-size: 20px;
     font-family: 'NanumSquareRound', sans-serif;
     line-height: 1.5;
   }

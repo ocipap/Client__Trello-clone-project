@@ -217,7 +217,7 @@
       ...mapGetters([
         'isAuth'
       ]),
-      isAuthenicated () {
+      isAuthenicated() {
         return this.isAuth
       }
     },
@@ -233,6 +233,7 @@
 
 <style scoped>
   @import 'slick-carousel/slick/slick.css';
+  
   h1,
   h2,
   h3 {
@@ -272,7 +273,7 @@
   }
   
   .layout-two-text>* {
-    margin: 1.7rem 0;
+    margin: 1.2rem 0;
   }
   
   .layout-three-col {
@@ -284,7 +285,7 @@
   }
   
   .layout-three-col>div {
-    padding: 0 .72rem;
+    padding: 0 .5rem;
     padding-bottom: 71px;
     position: relative;
   }
@@ -294,29 +295,28 @@
   }
   
   section h1 {
-    font-size: 3.5rem;
+    font-size: 2.45rem;
     font-weight: bolder;
   }
   
   section h2 {
-    font-size: 2.7rem;
+    font-size: 1.89rem;
     font-weight: bolder;
   }
   
   p {
-    font-size: 1.43rem;
     color: #42526E;
   }
   
   p.big {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
   }
   
   .button {
     display: inline-block;
-    font-size: 1.3rem;
+    font-size: 0.9rem;
     border-radius: 6px;
-    padding: 1rem 2.5rem;
+    padding: 0.7rem 1.75rem;
     font-weight: 600;
   }
   
@@ -333,12 +333,12 @@
   }
   
   .button.big {
-    font-size: 1.6rem;
+    font-size: 1.12rem;
     font-weight: bolder;
   }
   
   .button.small {
-    font-size: 0.75rem;
+    font-size: 1.12rem;
   }
   
   .global-header {
@@ -346,8 +346,8 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0);
     transition: background 1s ease 0s, box-shadow 1s ease 0s;
     position: fixed;
-    height: 3rem;
-    padding: 1.2rem;
+    height: 2.1rem;
+    padding: 0.84rem;
     width: 100%;
     z-index: 1001;
   }
@@ -373,7 +373,7 @@
   
   .header-logo {
     display: block;
-    height: 3rem;
+    height: 2.1rem;
   }
   
   .header-logo>img {
@@ -390,23 +390,23 @@
     color: #fff;
     background: hsla(0, 0%, 0%, 0.15);
     box-shadow: 0 2px 0 hsla(0, 0%, 0%, 0.3);
-    font-size: 1rem;
+    font-size: .7rem;
     font-weight: 600;
-    padding: 1rem 1.6rem .8rem;
+    padding: .7rem 1.12rem .56rem;
     border-radius: 6px;
-    line-height: 1rem;
-    margin-right: 2rem;
+    line-height: .7rem;
+    margin-right: 1.4rem;
   }
   
   .global-header .option {
-    margin-right: 2rem;
+    margin-right: 1.4rem;
   }
   
   .global-header .option>a {
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: .84rem;
     font-weight: bold;
-    padding: .9rem 1.4rem .7rem;
+    padding: .63rem 1rem .5rem;
     line-height: 1rem;
   }
   
@@ -422,18 +422,18 @@
   }
   
   section#hero {
-    padding-top: 5.4rem;
+    padding-top: 3.8rem;
     background: linear-gradient(135deg, #0079BF 0%, #5067C5 100%);
   }
   
   .hero-text>* {
-    margin: 1.7rem 0;
+    margin: 1.2rem 0;
   }
   
   section#hero h1 {
-    margin-top: 4rem;
+    margin-top: 2.8rem;
     color: #fff;
-    line-height: 4.2rem;
+    line-height: 3rem;
   }
   
   section#hero p {
@@ -452,38 +452,38 @@
   }
   
   section#features .layout-three-col .img {
-    margin-top: 1.45rem;
+    margin-top: 1rem;
   }
   
   section#features .layout-three-col .img>img {
     height: auto;
     max-width: 100%;
-    margin: 1.45rem auto;
+    margin: 1rem auto;
   }
   
   section#features .layout-three-col h3 {
-    font-size: 1.65rem;
-    margin: 1rem;
-    margin-top: 0.7rem;
+    font-size: 1.15rem;
+    margin: .7rem;
+    margin-top: 0.5rem;
   }
   
   section#features .layout-three-col p {
-    font-size: 1.19rem;
+    font-size: 0.84rem;
   }
   
   section#features .layout-three-col>div p.cta a.button {
-    padding: 0.7rem 0.86rem;
+    padding: 0.5rem 0.6rem;
     box-shadow: 0 1px 0 #A5ACB0;
     color: hsl(0, 0%, 30%);
     background: #e2e4e6;
-    font-size: 1.25rem;
+    font-size: 0.875rem;
   }
   
   section#features .layout-three-col>div p.cta {
     position: absolute;
     bottom: 0;
-    left: .72rem;
-    right: .72rem;
+    left: .5rem;
+    right: .5rem;
   }
   
   section#features .layout-three-col>div p.cta a.button:hover {
@@ -531,7 +531,7 @@
   #work-smart .container .logo-area {
     display: flex;
     justify-content: space-around;
-    margin: 3rem 0;
+    margin: 2.1rem 0;
   }
   
   #get-started {
@@ -543,7 +543,7 @@
   
   @media screen and (min-width: 650px) {
     section {
-      padding: 2rem 1rem;
+      padding: 1.4rem 0.7rem;
     }
   }
   
@@ -562,7 +562,7 @@
       text-align: left;
     }
     section {
-      padding: 4rem 1rem;
+      padding: 2.8rem 0.7rem;
     }
     section img {
       max-width: initial;
