@@ -5,6 +5,7 @@ import Login from '@/views/Login'
 import Signup from '@/views/Signup'
 import Logout from '@/views/Logout'
 import Forgot from '@/views/ForgotPassword'
+import Reset from '@/views/ResetPassword'
 import Profile from '@/views/Profile'
 import BoardHome from '@/views/BoardHome'
 import store from '../store'
@@ -15,6 +16,12 @@ const requireAuth = () => (from, to, next) => {
   !!store.state.accessToken ? 
   next() :
   next(`/login?returnUrl=${encodeURIComponent(from.path)}`)
+}
+
+const alreadyLogin = () => (from, to, next) => {
+  !!store.state.accessToken ?
+  next(`/${store.state.username}/boards`) :
+  next()
 }
 
 export default new Router({
@@ -29,11 +36,13 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login,
+      beforeEnter: alreadyLogin()
     },
     {
       path: '/signup',
       name: 'Signup',
       component: Signup,
+      beforeEnter: alreadyLogin()
     }, 
     {
       path: '/logged-out',
@@ -44,6 +53,13 @@ export default new Router({
       path: '/forgot',
       name: 'Forgot',
       component: Forgot,
+      beforeEnter: alreadyLogin()
+    },
+    {
+      path: '/reset',
+      name: 'Reset',
+      component: Reset,
+      beforeEnter: alreadyLogin()
     },
     {
       path: '/:username',

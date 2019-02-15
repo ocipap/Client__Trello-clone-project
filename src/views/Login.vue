@@ -70,16 +70,14 @@
             },
             onSubmit() {
                 const { email, password } = this
+                this.errorsToTrue()
                 if (email == "") {
-                    this.errorsToTrue()
                     this.errors.CHECKID = true
                     return
                 } else if (password == "") {
-                    this.errorsToTrue()
                     this.errors.CHECKPASS = true
                     return
                 } else {
-                    this.errorsToTrue()
                     this.LOGIN({ email, password }).then(() => {
                         this.$router.push(this.returnPath)
                     }).catch(err => {

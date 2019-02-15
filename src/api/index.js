@@ -37,5 +37,17 @@ export const auth = {
   },
   signup(username, email, password) {
     return request.post('/user/join', { username, email, password })
+  },
+  forgot(email) {
+    return request.post('/user/reset', { email })
+  },
+  verifyReset(uid, resetCode) {
+    return request.get(`/user/reset?uid=${uid}&resetCode=${resetCode}`)
+  },
+  deleteReset(uid, resetCode) {
+    return request.delete(`/user/reset?uid=${uid}&resetCode=${resetCode}`)
+  },
+  reset(password, uid, resetCode) {
+    return request.put(`/user/reset?uid=${uid}&resetCode=${resetCode}`, { password })
   }
 }

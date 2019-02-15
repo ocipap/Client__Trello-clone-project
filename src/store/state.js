@@ -1,5 +1,6 @@
 const state = {
     accessToken : null,
+    username: '',
     boardList : [],
     board: {
         lists: []

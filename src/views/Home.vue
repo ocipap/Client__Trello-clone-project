@@ -8,7 +8,7 @@
           </router-link>
         </div>
         <div class="global-header-section mod-right">
-          <router-link v-if="isAuthenicated" class="gotoboard" :to="{name: 'BoardHome', params: {username: 'ocipap'}}">Go to Your Boards</router-link>
+          <router-link v-if="isAuthenicated" class="gotoboard" :to="{name: 'BoardHome', params: {username: username}}">Go to Your Boards</router-link>
           <div class="option" v-else>
             <router-link class="login" to="/login">Log In</router-link>
             <router-link class="signup" to="/signup">Sign Up</router-link>
@@ -22,7 +22,7 @@
           <h1>Trello lets you work more collaboratively and get more done.</h1>
           <p class="big">Trello’s boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexible and rewarding way.</p>
           <p>
-            <router-link to="Signup" class="button button-primary big">Sign Up – It’s Free!</router-link>
+            <router-link to="/signup" class="button button-primary big">Sign Up – It’s Free!</router-link>
           </p>
         </div>
         <div class="heor-img">
@@ -37,7 +37,7 @@
           <p>Whether it’s for work, a side project or even the next family vacation, Trello helps your team stay organized.
           </p>
           <p>
-            <router-link to="Signup" class="button button-secondary">Start doing →</router-link>
+            <router-link to="/signup" class="button button-secondary">Start doing →</router-link>
           </p>
         </div>
         <div class="layout-two-image">
@@ -173,7 +173,7 @@
             <h2>Start Planning Today</h2>
             <p>Sign up and become one of the millions of people around the world using Trello to get more done.</p>
             <p>
-              <router-link to="Signup" class="signup button button-primary">Get Started – It’s Free!</router-link>
+              <router-link to="/signup" class="signup button button-primary">Get Started – It’s Free!</router-link>
             </p>
           </div>
         </div>
@@ -215,10 +215,14 @@
     },
     computed: {
       ...mapGetters([
-        'isAuth'
+        'isAuth',
+        'getUsername'
       ]),
       isAuthenicated() {
         return this.isAuth
+      },
+      username() {
+        return this.getUsername
       }
     },
     created() {
